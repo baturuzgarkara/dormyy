@@ -273,8 +273,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
   subscribeForm.addEventListener('submit', function(e) {
     e.preventDefault();
-    
+  }
     const email = document.getElementById('subscribeEmail').value;
+
     const humanCheck = document.getElementById('humanCheck').checked;
     
     if (!humanCheck) {
@@ -286,11 +287,34 @@ document.addEventListener('DOMContentLoaded', function() {
       showMessage(subscribeMessage, translations[currentLang]['messages.invalidEmail'], 'error');
       return;
     }
-    
-    console.log('Subscribe email:', email);
-    showMessage(subscribeMessage, translations[currentLang]['messages.subscribeSuccess'], 'success');
-    subscribeForm.reset();
+  
+  subscribeMessage.textContent = "..."; 
+  fetch("https://formsubmit.co/ajax/batu.ruzgar.kara@gmail.com", {
+      method: "POST",
+      headers: { 
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+      },
+      body: JSON.stringify({
+          email: email,
+          _subject: "Dormy - Yeni Abone Var!" // Mail başlığı
+      })
+  })
+  .then(response => response.json())
+  .then(data => {
+      // Başarılı olursa senin başarı mesajın çalışsın
+      showMessage(subscribeMessage, translations[currentLang]['messages.subscribeSuccess'], 'success');
+      subscribeForm.reset();
+      // Checkbox'ı da temizleyelim
+      document.getElementById('humanCheck').checked = false;
+  })
+  .catch(error => {
+      // Bir hata olursa
+      console.log(error);
+      showMessage(subscribeMessage, "Bir hata oluştu, lütfen tekrar deneyin.", 'error');
   });
+
+  // ----------------------------
 
   const contactForm = document.getElementById('contactForm');
   const contactFormMessage = document.getElementById('contactFormMessage');
@@ -311,17 +335,30 @@ document.addEventListener('DOMContentLoaded', function() {
       return;
     }
     
-    const subject = currentLang === 'tr' ? 'Dormy İletişim Formu' : 'Dormy Contact Form';
-    const body = currentLang === 'tr' 
-      ? 'Gönderen: ' + email + '\n\nMesaj:\n' + message
-      : 'From: ' + email + '\n\nMessage:\n' + message;
-    
-    const mailtoLink = `mailto:dormy.metu@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    window.location.href = mailtoLink;
-    
-    showMessage(contactFormMessage, translations[currentLang]['messages.messageReady'], 'success');
-    contactForm.reset();
-  });
+    contactFormMessage.textContent = "...";
+
+    fetch("https://formsubmit.co/ajax/batu.ruzgar.kara@gmail.com", {
+        method: "POST",
+        headers: { 
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+            email: email,       // Gönderen kişinin maili
+            message: message,   // Yazdığı mesaj
+            _subject: "Dormy - Yeni İletişim Mesajı" // Sana gelen mailin başlığı
+        })
+    })
+    .then(response => response.json())
+    .then(data => {
+        // Başarı mesajını göster
+        showMessage(contactFormMessage, translations[currentLang]['messages.messageReady'], 'success');
+        contactForm.reset();
+    })
+    .catch(error => {
+        console.log(error);
+        showMessage(contactFormMessage, "Bir hata oluştu.", 'error');
+    });
 
   function isValidEmail(email) {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
