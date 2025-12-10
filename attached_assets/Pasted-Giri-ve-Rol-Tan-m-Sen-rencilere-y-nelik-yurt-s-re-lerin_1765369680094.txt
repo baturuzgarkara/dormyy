@@ -1,0 +1,231 @@
+Giriş ve Rol Tanımı:
+
+
+
+
+
+Sen, öğrencilere yönelik yurt süreçlerini dijitalleştiren "Dormy" mobil uygulaması için modern ve tam işlevli bir web açılış sayfası (landing page) basarlayıp kodlayacak deneyimli bir Full Stack Yazılım Geliştiricisin.
+
+
+
+
+
+Temel Hedefler:
+
+
+
+Uygulamanın yeni yayınlanacağını duyurmak.
+
+
+
+Temel özelliklerini etkili bir şekilde tanıtmak.
+
+
+
+Kullanıcıların ilgisini ölçmek ve geri bildirim toplamak.
+
+
+
+İleride bilgilendirme yapmak amacıyla bir e-posta abonelik listesi oluşturmak.
+
+
+
+Hedef Kitle, Sorun ve Çözüm:
+
+
+
+Hedef Kitle: Üniversite ve yurtta kalan 16-24 yaş arası öğrenciler.
+
+
+
+Sorun: Yurtta yavaş işleyen süreçler, dosyalarca kağıt muhafaza etme zorunluluğu ve rezervasyon/takip yapmadaki sorunlar.
+
+
+
+Ana Teklif (Değer Önerisi): Yurt süreçlerini dijitalleştirerek, yönetimler için veriye dayalı yönetim paneli sunmak ve öğrencilerin günlük yurt yaşamını pratik ve zahmetsiz hale getirmektir.
+
+
+
+Sayfa Tonu: Genç, samimi, dinamik, öğrenci odaklı ve güven veren bir kurumsal tonda olmalıdır.
+
+
+
+Tasarım ve Teknik Gereksinimler:
+
+
+
+Ana Renk Paleti:
+
+
+
+Birincil Renk: Mavi (#2d62a8)
+
+
+
+Arka Plan/İkincil Renk: Beyaza yakın tonlar (#eeedeb)
+
+
+
+Görsel Stil: Modern, temiz ve düz (flat) basarım ilkelerine uygun illüstrasyonlar kullanılmalıdır.
+
+
+
+Mobil Uyumluluk: Tasarım, tüm cihazlarda (özellikle mobil) sorunsuz çalışacak şekilde tamamen duyarlı (responsive) olmalıdır.
+
+
+
+İstenen Çıktı Formatı: Kodlar aşağıdaki yapıda, ayrı bloklar halinde sunulmalıdır:
+
+
+
+HTML (index.html)
+
+
+
+CSS (style.css - Mobile-first yaklaşımı ile medya sorguları içermelidir.)
+
+
+
+JavaScript (script.js - CTA ve form işlevlerini içermelidir.)
+
+
+
+Sayfa Bölümleri (Sırasıyla):
+
+
+
+Header ve Navigasyon:
+
+
+
+Menu Butonları: "Ne Yapıyoruz", "İletişim", "Önce Senin Haberin Olsun" and "Biz Kimiz".
+
+
+
+Tüm butonlar kullanıcıyı ilgili sayfa bölümlerine yönlendirmelidir.
+
+
+
+"Önce Senin Haberin Olsun" buttonu, doğrudan e-posta abonelik formuna yönlendirmelidir.
+
+
+
+Hero Bölümü:
+
+
+
+Uygulamanın ana faydasını özetleyen çekici bir başlık ve açıklama metni içermelidir.
+
+
+
+Görünür bir a CTA butonu bulunmalıdır: "Önce Senin Haberin Olsun" (E-posta Abonelik Bölümüne yönlendirmelidir).
+
+
+
+"Ne Yapıyoruz?" Bölümü (Özellikler):
+
+
+
+Her bir özelliğin kısa bir açıklamasını ve bir görselini içeren minimalist kutucuklar halinde sunulmalıdır.
+
+
+
+Özellikler:
+
+
+
+Çevrimiçi Rezervasyon System 
+
+
+
+Akıllı Arıza ve Talep Bildirimi 
+
+
+
+Yurt İçi Paylaşım Sistemi 
+
+
+
+SSS (Sıkça Sorulan Sorular) Modülü
+
+
+
+Yurt İçi Etkinlikler, Kesintiler ve Önemli Duyurular Hakkında Anlık Bildirim Sistemi
+
+
+
+E-posta Abonelik Bölümü (CTA ve Form):
+
+
+
+Kullanıcıların e-posta adreslerini girmeleri için bir giriş alanı ve kısa bir teşvik edici metin bulunmalıdır.
+
+
+
+Gönderme Butonu Metni: "Önce Senin Haberin Olsun."
+
+
+
+Güvenlik Gereksinimi: Form, seri e-posta saldırılarına karşı bir koruma mekanizması (örneğin, görünür bir reCAPTCHA alanı veya basit bir anti-spam kontrolü) içermelidir.
+
+
+
+Alt Bilgi (Footer):
+
+
+
+Sosyal Medya İkonları: E-posta, Instagram and LinkedIn.
+
+
+
+Bağlantılar:
+
+
+
+Instagram: https://www.instagram.com/dormy.metu?igsh=MTZrcndxcGhjZnk1Ng==
+
+
+
+LinkedIn: https://www.linkedin.com/company/mydormy/
+
+
+
+E-mail: mailto:dormy.metu@gmail.com
+
+
+
+İkincil Sayfalar (Menüden Erişilebilir):
+
+
+
+"İletişim" Sayfası/Bölümü:
+
+
+
+Sosyal Medya Hesapları (LinkedIn, Instagram) bilgisi.
+
+
+
+Kullanıcının mesajını yazıp gönderebileceği by Mesaj Kutucuğu and E-posta Girişi (Mesajlar dormy.metu@gmail.com adresine yönlendirilmelidir).
+
+
+
+Gönderme Butonu Metni: "Gönder."
+
+
+
+"Biz Kimiz" Sayfası/Bölümü:
+
+
+
+Misyon ve Vizyon metinleri için yer tutucu alanlar.
+
+
+
+Ekip Üyelerinin Tanıtımı: Genel tanıtım ve ekip üyeleri listesi (Batu Rüzgar Kara, Umut Öğünç, Gül Özbek, Mahmut Enes Cantürk).
+
+
+
+
+
+“Sıkça Sorulan Sorular” Bölümü:
