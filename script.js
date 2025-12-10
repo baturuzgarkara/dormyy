@@ -273,7 +273,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   subscribeForm.addEventListener('submit', function(e) {
     e.preventDefault();
-  }
+  
     const email = document.getElementById('subscribeEmail').value;
 
     const humanCheck = document.getElementById('humanCheck').checked;
@@ -285,10 +285,11 @@ document.addEventListener('DOMContentLoaded', function() {
     
     if (!isValidEmail(email)) {
       showMessage(subscribeMessage, translations[currentLang]['messages.invalidEmail'], 'error');
+      });
       return;
     }
   
-  subscribeMessage.textContent = "..."; 
+  subscribeMessage.textContent = "...") 
   fetch("https://formsubmit.co/ajax/batu.ruzgar.kara@gmail.com", {
       method: "POST",
       headers: { 
