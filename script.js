@@ -285,11 +285,10 @@ document.addEventListener('DOMContentLoaded', function() {
     
     if (!isValidEmail(email)) {
       showMessage(subscribeMessage, translations[currentLang]['messages.invalidEmail'], 'error');
-      });
       return;
     }
   
-  subscribeMessage.textContent = "...") 
+  subscribeMessage.textContent = "..."
   fetch("https://formsubmit.co/ajax/batu.ruzgar.kara@gmail.com", {
       method: "POST",
       headers: { 
@@ -314,6 +313,7 @@ document.addEventListener('DOMContentLoaded', function() {
       console.log(error);
       showMessage(subscribeMessage, "Bir hata oluştu, lütfen tekrar deneyin.", 'error');
   });
+    });
 
   // ----------------------------
 
@@ -360,7 +360,7 @@ document.addEventListener('DOMContentLoaded', function() {
         console.log(error);
         showMessage(contactFormMessage, "Bir hata oluştu.", 'error');
     });
-
+    });
   function isValidEmail(email) {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailRegex.test(email);
