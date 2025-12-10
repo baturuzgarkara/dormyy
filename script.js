@@ -289,7 +289,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   
   subscribeMessage.textContent = "..."
-  fetch("https://formsubmit.co/ajax/batu.ruzgar.kara@gmail.com", {
+  fetch("https://formsubmit.co/ajax/dormy.metu@gmail.com", {
       method: "POST",
       headers: { 
           'Content-Type': 'application/json',
@@ -338,7 +338,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     contactFormMessage.textContent = "...";
 
-    fetch("https://formsubmit.co/ajax/batu.ruzgar.kara@gmail.com", {
+    fetch("https://formsubmit.co/ajax/dormy.metu@gmail.com", {
         method: "POST",
         headers: { 
             'Content-Type': 'application/json',
