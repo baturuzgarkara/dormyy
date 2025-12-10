@@ -184,6 +184,19 @@ a {
   text-align: center;
 }
 
+.coming-soon-badge {
+  display: inline-block;
+  background: var(--primary-color);
+  color: white;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
 .hero-title {
   font-size: 2.5rem;
   font-weight: 800;
@@ -300,6 +313,20 @@ a {
   box-shadow: var(--shadow-hover);
 }
 
+.feature-card-more {
+  background: linear-gradient(135deg, var(--primary-light) 0%, var(--primary-color) 100%);
+  color: white;
+}
+
+.feature-card-more .feature-icon {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.feature-card-more .feature-title,
+.feature-card-more .feature-description {
+  color: white;
+}
+
 .feature-icon {
   display: inline-flex;
   align-items: center;
@@ -369,6 +396,14 @@ a {
   border-color: var(--primary-color);
 }
 
+.form-input-bordered {
+  border: 2px solid var(--border-color);
+}
+
+.form-input-bordered:focus {
+  border-color: var(--primary-color);
+}
+
 .form-textarea {
   resize: vertical;
   min-height: 120px;
@@ -389,6 +424,17 @@ a {
   cursor: pointer;
   color: var(--text-dark);
   font-weight: 500;
+}
+
+.captcha-label-small {
+  padding: 8px 14px;
+  font-size: 0.85rem;
+  gap: 8px;
+}
+
+.captcha-label-small input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
 }
 
 .captcha-label input[type="checkbox"] {
@@ -744,6 +790,7 @@ a {
   .hero-text {
     text-align: left;
     flex: 1;
+    padding-right: 40px;
   }
 
   .hero-description {
@@ -752,7 +799,7 @@ a {
   }
 
   .hero-visual {
-    flex: 1;
+    flex: 0 0 auto;
   }
 
   .features-grid {
@@ -787,13 +834,12 @@ a {
     font-size: 4rem;
   }
 
-  .features-grid {
-    grid-template-columns: repeat(3, 1fr);
+  .hero-text {
+    padding-right: 60px;
   }
 
-  .features-grid .feature-card:nth-child(4),
-  .features-grid .feature-card:nth-child(5) {
-    grid-column: span 1;
+  .features-grid {
+    grid-template-columns: repeat(3, 1fr);
   }
 
   .phone-mockup {
@@ -804,7 +850,7 @@ a {
 
 @media (min-width: 1200px) {
   .features-grid {
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 
   .feature-card {

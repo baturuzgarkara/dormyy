@@ -41,17 +41,17 @@ document.addEventListener('DOMContentLoaded', function() {
     const humanCheck = document.getElementById('humanCheck').checked;
     
     if (!humanCheck) {
-      showMessage(subscribeMessage, 'Lütfen robot olmadığınızı onaylayın.', 'error');
+      showMessage(subscribeMessage, 'Please confirm you are not a robot.', 'error');
       return;
     }
     
     if (!isValidEmail(email)) {
-      showMessage(subscribeMessage, 'Lütfen geçerli bir e-posta adresi girin.', 'error');
+      showMessage(subscribeMessage, 'Please enter a valid email address.', 'error');
       return;
     }
     
     console.log('Subscribe email:', email);
-    showMessage(subscribeMessage, 'Teşekkürler! E-posta listemize başarıyla kaydoldunuz.', 'success');
+    showMessage(subscribeMessage, 'Thank you! You have successfully joined our email list.', 'success');
     subscribeForm.reset();
   });
 
@@ -65,19 +65,19 @@ document.addEventListener('DOMContentLoaded', function() {
     const message = document.getElementById('contactMessage').value;
     
     if (!isValidEmail(email)) {
-      showMessage(contactFormMessage, 'Lütfen geçerli bir e-posta adresi girin.', 'error');
+      showMessage(contactFormMessage, 'Please enter a valid email address.', 'error');
       return;
     }
     
     if (message.trim().length < 10) {
-      showMessage(contactFormMessage, 'Mesajınız en az 10 karakter olmalıdır.', 'error');
+      showMessage(contactFormMessage, 'Your message must be at least 10 characters.', 'error');
       return;
     }
     
-    const mailtoLink = `mailto:dormy.metu@gmail.com?subject=Dormy İletişim Formu&body=${encodeURIComponent('Gönderen: ' + email + '\n\nMesaj:\n' + message)}`;
+    const mailtoLink = `mailto:dormy.metu@gmail.com?subject=Dormy Contact Form&body=${encodeURIComponent('From: ' + email + '\n\nMessage:\n' + message)}`;
     window.location.href = mailtoLink;
     
-    showMessage(contactFormMessage, 'Mesajınız hazırlandı. E-posta uygulamanız açılacak.', 'success');
+    showMessage(contactFormMessage, 'Your message is ready. Your email app will open.', 'success');
     contactForm.reset();
   });
 
